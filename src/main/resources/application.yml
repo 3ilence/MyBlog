@@ -10,7 +10,7 @@ spring:
     encoding: UTF-8
     servlet:
       content-type: text/html
-    mode: HTML5
+    mode: HTML
 #mybatis
 mybatis:
   mapper-locations: classpath:mapper/*.xml
@@ -21,9 +21,4 @@ server:
   port: 8081
 
 #pagehelper
-pagehelper:
-  helper-dialect: mysql
-  reasonable: true
-  support-methods-arguments: true
-  #maybe this part has problem
-  params: count=countSql
+

@@ -115,7 +115,7 @@ public interface BlogMapper {
     Blog selectBySubUrl(String subUrl);
 
     /**
-     * 更新博客的类别信息
+     * 更新博客的类别信息，把所有类别id在ids中的类别都改成新的id
      * @param categoryName
      * @param categoryId
      * @param ids

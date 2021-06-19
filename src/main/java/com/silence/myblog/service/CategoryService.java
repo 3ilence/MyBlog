@@ -15,7 +15,7 @@ import java.util.List;
 public interface CategoryService {
 
     /**
-     * 查询分类的分页数据
+     * 查询分类的分页数据,当参数为null时查询的是所有的数据
      * @param pageUtil
      * @return PageResult
      */
