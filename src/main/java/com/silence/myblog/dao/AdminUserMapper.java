@@ -27,7 +27,7 @@ public interface AdminUserMapper {
     int insertSelective(AdminUser record);
 
     /**
-     * 登录
+     * 用户名密码登录
      * @param userName 用户登录名
      * @param password 用户登陆密码
      * @return 管理员用户对象

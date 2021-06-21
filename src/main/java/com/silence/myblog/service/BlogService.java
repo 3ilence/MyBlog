@@ -24,7 +24,7 @@ public interface BlogService {
 
     /**
      * 分页查询博客
-     * @param pageUtil
+     * @param pageUtil 分页工具类对象
      * @return PageResult
      */
     PageResult getBlogsPage(PageQueryUtil pageUtil);

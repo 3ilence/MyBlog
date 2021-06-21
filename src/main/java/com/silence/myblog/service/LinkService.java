@@ -22,34 +22,34 @@ public interface LinkService {
     PageResult getBlogLinkPage(PageQueryUtil pageUtil);
 
     /**
-     *
+     * 获取友链总数
      * @return
      */
     int getTotalLinks();
 
     /**
-     *
+     * 新增友链
      * @param link
      * @return
      */
     Boolean saveLink(BlogLink link);
 
     /**
-     *
+     * 根据友链id查询友链
      * @param id
      * @return
      */
     BlogLink selectById(Integer id);
 
     /**
-     *
+     * 更新友链信息
      * @param tempLink
      * @return
      */
     Boolean updateLink(BlogLink tempLink);
 
     /**
-     *
+     * 批量删除友链
      * @param ids
      * @return
      */

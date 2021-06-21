@@ -28,3 +28,5 @@ a blog website developed by springboot+mybatis+thymeleaf
 ```
 如果查找参数是一个数组，可以用in+foreach
 - 个人感觉mapper.xml中如果参数是对象的话不需要写parameterType这个属性了
+
+th:fragment
