@@ -6,7 +6,7 @@ import com.silence.myblog.entity.AdminUser;
  * @ClassName : AdminUserService
  * @Author : Silence
  * @Date: 2021/6/14 19:21
- * @Description :
+ * @Description : 用户管理员服务层
  */
 public interface AdminUserService {
     /**
@@ -18,7 +18,7 @@ public interface AdminUserService {
     AdminUser login(String userName, String password);
 
     /**
-     * 获取用户信息
+     * 根据用户id获取用户信息
      * @param loginUserId 用户id
      * @return 管理员用户对象
      */

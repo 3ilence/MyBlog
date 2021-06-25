@@ -27,9 +27,9 @@ public class PatternUtil {
     }
 
     /**
-     *
-     * @param emailStr
-     * @return
+     * 判断该邮箱字符串是否合法
+     * @param emailStr 待判断的邮箱字符串
+     * @return 如果合法则返回true，否则返回false
      */
     public static boolean isEmail(String emailStr) {
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailStr);
@@ -37,9 +37,9 @@ public class PatternUtil {
     }
 
     /**
-     *
-     * @param urlString
-     * @return
+     * 判断该rul字符串是否合法
+     * @param urlString 待判断的url字符串
+     * @return 如果合法则返回true，否则返回false
      */
     public static boolean isURL(String urlString) {
         String regex = "^([hH][tT]{2}[pP]:/*|[hH][tT]{2}[pP][sS]:/*|[fF][tT][pP]:/*)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+(\\?{0,1}(([A-Za-z0-9-~]+\\={0,1})([A-Za-z0-9-~]*)\\&{0,1})*)$";

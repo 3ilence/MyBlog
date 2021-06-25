@@ -52,7 +52,7 @@ public interface BlogCategoryMapper {
 
     /**
      * 选择性更新BlogCategory对象信息，即只更新某几个字段的信息
-     * @param record
+     * @param record 待更新的博客类别对象
      * @return 更新成功返回1，否则返回0
      */
     int updateByPrimaryKeySelective(BlogCategory record);

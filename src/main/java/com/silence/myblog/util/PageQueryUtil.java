@@ -7,7 +7,7 @@ import java.util.Map;
  * @ClassName : PageQueryUtil
  * @Author : Silence
  * @Date: 2021/6/14 19:42
- * @Description : 分页查询工具类，继承自LinkedHashMap
+ * @Description : 分页查询工具类
  */
 public class PageQueryUtil extends LinkedHashMap<String, Object> {
     //当前页码

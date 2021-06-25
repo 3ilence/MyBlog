@@ -1,31 +1,30 @@
 package com.silence.myblog.util;
 
-import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * @ClassName : MD5Util
  * @Author : Silence
  * @Date: 2021/6/14 19:42
- * @Description :
+ * @Description : MD5加密工具类
  */
 public class MD5Util {
     /**
-     * 将byte数组转换为16进制数数组，每一个16进制数实际上是一个字符串
-     * @param b
-     * @return
+     * 将byte数组转换为16进制数，每一个16进制数实际上是一个字符串，连接得到最终字符串
+     * @param b byte类型数组
+     * @return 转换完成得到的16进制数字符串
      */
-    private static String byteArrayToHexString(byte b[]) {
-        StringBuffer resultSb = new StringBuffer();
+    private static String byteArrayToHexString(byte[] b) {
+        //应该是没有并发的情况，可以使用StringBuilder
+        StringBuilder resultSb = new StringBuilder();
         for (int i = 0; i < b.length; i++)
             resultSb.append(byteToHexString(b[i]));
         return resultSb.toString();
     }
 
     /**
-     * 将10进制的byte数据转换为16进制
-     * @param b
+     * 将10进制的byte数据转换为16进制数
+     * @param b byte类型数据
      * @return 转换后的16进制数字符串
      */
     private static String byteToHexString(byte b) {
@@ -39,7 +38,7 @@ public class MD5Util {
 
     /**
      *
-     * @param origin 输入的字符串
+     * @param origin 加密前字符串
      * @param charsetname 字符集
      * @return md5加密后的字符串
      */
@@ -49,6 +48,8 @@ public class MD5Util {
             resultString = new String(origin);
             MessageDigest md = MessageDigest.getInstance("MD5");
             if (charsetname == null || "".equals(charsetname))
+                //传入的数据需要转化为指定编码的字节数组
+                //再将字节数组转换为16进制
                 resultString = byteArrayToHexString(md.digest(resultString.getBytes()));
             else
                 resultString = byteArrayToHexString(md.digest(resultString.getBytes(charsetname)));

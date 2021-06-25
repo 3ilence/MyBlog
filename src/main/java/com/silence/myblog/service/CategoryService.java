@@ -10,13 +10,13 @@ import java.util.List;
  * @ClassName : CategoryService
  * @Author : Silence
  * @Date: 2021/6/17 15:46
- * @Description :
+ * @Description : 博客类别服务层
  */
 public interface CategoryService {
 
     /**
      * 查询分类的分页数据,当参数为null时查询的是所有的数据
-     * @param pageUtil
+     * @param pageUtil 分页查询工具类对象
      * @return PageResult
      */
     PageResult getBlogCategoryPage(PageQueryUtil pageUtil);
@@ -36,7 +36,7 @@ public interface CategoryService {
     Boolean saveCategory(String categoryName,String categoryIcon);
 
     /**
-     *
+     * 更新博客分类的信息
      * @param categoryId 类别id
      * @param categoryName 类别名
      * @param categoryIcon 类别图标
@@ -47,7 +47,7 @@ public interface CategoryService {
     /**
      * 批量删除分类
      * @param ids 类别id列表
-     * @return
+     * @return 删除成功返回true，否则返回false
      */
     Boolean deleteBatch(Integer[] ids);
 

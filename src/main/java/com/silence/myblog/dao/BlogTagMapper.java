@@ -72,8 +72,8 @@ public interface BlogTagMapper {
     List<BlogTag> findTagList(PageQueryUtil pageUtil);
 
     /**
-     * 查询标签总数
-     * @return 标签总数
+     * 查询标签数量
+     * @return 标签数量
      */
     List<BlogTagCount> getTagCount();
 

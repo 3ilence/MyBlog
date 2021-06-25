@@ -9,7 +9,7 @@ import java.net.URISyntaxException;
  * @ClassName : MyBlogUtil
  * @Author : Silence
  * @Date: 2021/6/14 19:42
- * @Description :
+ * @Description : 博客工具类
  */
 public class MyBlogUtils {
     /**

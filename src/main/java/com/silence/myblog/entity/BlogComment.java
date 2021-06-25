@@ -25,7 +25,7 @@ public class BlogComment {
     /**评论者的邮箱*/
     private String email;
 
-    /***/
+    /**评论所在网页的url*/
     private String websiteUrl;
 
     /**评论内容*/
@@ -35,17 +35,17 @@ public class BlogComment {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date commentCreateTime;
 
-    /***/
+    /**评论者ip*/
     private String commentatorIp;
 
-    /***/
+    /**评论的回复内容*///这样写岂不是一个评论只能被回复一次
     private String replyBody;
 
-    /***/
+    /**评论时间*/
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date replyCreateTime;
 
-    /***/
+    /**评论状态，是否审核*/
     private Byte commentStatus;
 
     /**是否删除*/

@@ -39,6 +39,11 @@ public class BlogController {
     @Resource
     private CategoryService categoryService;
 
+    /**
+     * 分页查询获得文章列表
+     * @param params 分页参数
+     * @return 文章列表封装后的Result
+     */
     @GetMapping("/blogs/list")
     @ResponseBody
     public Result list(@RequestParam Map<String, Object> params) {
@@ -49,6 +54,11 @@ public class BlogController {
         return ResultGenerator.genSuccessResult(blogService.getBlogsPage(pageUtil));
     }
 
+    /**
+     * 博客管理页
+     * @param request 请求
+     * @return 跳转到博客管理页
+     */
     @GetMapping("/blogs")
     public String list(HttpServletRequest request) {
         request.setAttribute("path","blogs");
@@ -81,7 +91,7 @@ public class BlogController {
                        @RequestParam("blogCategoryId") Integer blogCategoryId,
                        @RequestParam("blogTags") String blogTags,
                        @RequestParam("blogContent") String blogContent,
-                       @RequestParam("blogCoverImages") String blogCoverImage,
+                       @RequestParam("blogCoverImage") String blogCoverImage,
                        @RequestParam("blogStatus") Byte blogStatus,
                        @RequestParam("enableComment") Byte enableComment) {
         if (StringUtils.isEmpty(blogTitle)) {

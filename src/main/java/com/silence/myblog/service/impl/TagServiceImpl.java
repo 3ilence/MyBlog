@@ -36,6 +36,7 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public int getTotalTags() {
+        //参数为null的话就是查询标签总数
         return blogTagMapper.getTotalTags(null);
     }
 
@@ -63,6 +64,7 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public List<BlogTagCount> getBlogTagCountForIndex() {
+        //这个函数的sql有点复杂，总之不是查询标签总数
         return blogTagMapper.getTagCount();
     }
 }

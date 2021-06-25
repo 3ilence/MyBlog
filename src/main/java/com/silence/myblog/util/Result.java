@@ -11,8 +11,11 @@ import java.io.Serializable;
  */
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
+    /**Http状态码*/
     private int resultCode;
+    /**结果信息*/
     private String message;
+    /**数据*/
     private T data;
 
     public Result() {

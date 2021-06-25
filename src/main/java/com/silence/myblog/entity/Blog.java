@@ -34,10 +34,10 @@ public class Blog {
     /**博客标签*/
     private String blogTags;
 
-    /***/
+    /**博客状态，是否审核成功*/
     private Byte blogStatus;
 
-    /***/
+    /**博客预览*/
     private Long blogViews;
 
     /**是否允许评论*/

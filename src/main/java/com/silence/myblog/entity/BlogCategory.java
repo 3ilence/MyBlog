@@ -9,7 +9,7 @@ import java.util.Date;
  * @ClassName : BlogCategory
  * @Author : Silence
  * @Date: 2021/6/14 18:15
- * @Description : 博客类别的实体类
+ * @Description : 博客分类的实体类
  */
 @Data
 public class BlogCategory {

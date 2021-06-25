@@ -10,7 +10,7 @@ import java.util.List;
  * @ClassName : PageResult
  * @Author : Silence
  * @Date: 2021/6/14 19:43
- * @Description : 分页工具类
+ * @Description : 查询结果包装类
  */
 @Data
 public class PageResult implements Serializable {
@@ -30,6 +30,7 @@ public class PageResult implements Serializable {
         this.totalCount = totalCount;
         this.pageSize = pageSize;
         this.currPage = currPage;
+        //总页数等于总记录数除以每页记录数再向上取整
         this.totalPage = (int) Math.ceil((double) totalCount / pageSize);
     }
 }

@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <header th:replace="admin/header::header-fragment"></header>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
     <!-- 引入页面头header-fragment -->
     <div th:replace="admin/header::header-nav"></div>
-    <!-- 引入工具栏sidebar-fragment -->
+    <!-- 引入侧边栏sidebar-fragment -->
     <div th:replace="admin/sidebar::sidebar-fragment(${path})"></div>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
-            <div class="container-fluid"></div>
+            <div class="container-fluid">
+            </div><!-- /.container-fluid -->
         </div>
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
                 <div class="card-header">
                     <h3 class="card-title">管理首页</h3>
-                </div><!-- /.card-body -->
+                </div> <!-- /.card-body -->
                 <div class="row" style="margin-top: 40px;border-top:0px;">
                     <div class="col-lg-4 col-6">
                         <!-- small box -->
@@ -26,7 +27,7 @@
                             <div class="inner">
                                 <h3>新增博客</h3>
 
-                                <p>沉淀</p>
+                                <p>记录你的心情吧</p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-pencil-square-o"></i>
@@ -42,13 +43,14 @@
                         <div class="small-box bg-success">
                             <div class="inner">
                                 <h3 th:text="${blogCount}">65</h3>
-                                <p>总文章总数</p>
+
+                                <p>总文章数</p>
                             </div>
                             <div class="icon">
                                 <i class="fa fa-list-alt"></i>
                             </div>
-                            <a th:href="@{/admiin/blogs}" class="small-box-footer">More info
-                            <i class="fa fa-arrow-cicle"></i></a>
+                            <a th:href="@{/admin/blogs}" class="small-box-footer">More info
+                                <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <!-- ./col -->
@@ -57,6 +59,7 @@
                         <div class="small-box bg-primary">
                             <div class="inner">
                                 <h3 th:text="${commentCount}">65</h3>
+
                                 <p>收到评论数</p>
                             </div>
                             <div class="icon">

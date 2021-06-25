@@ -32,11 +32,20 @@ public class AdminController {
     @Resource
     private CommentService commentService;
 
+    /**
+     * 访问登陆页面
+     * @return 登录页面
+     */
     @GetMapping({"/login"})
     public String login() {
         return "admin/login";
     }
 
+    /**
+     * 访问首页
+     * @param request 请求
+     * @return 首页页面
+     */
     @GetMapping({"", "/", "/index", "/index.html"})
     public String index(HttpServletRequest request) {
         request.setAttribute("path", "index");
@@ -48,6 +57,14 @@ public class AdminController {
         return "admin/index";
     }
 
+    /**
+     * 用户名，密码登录管理员用户
+     * @param userName 用户名
+     * @param password 密码
+     * @param verifyCode 验证码
+     * @param session session
+     * @return 登陆成功则跳转到后台管理首页，失败则重新返回登录页
+     */
     @PostMapping("/login")
     public String login(@RequestParam("userName") String userName,
                         @RequestParam("password") String password,
@@ -79,6 +96,11 @@ public class AdminController {
         }
     }
 
+    /**
+     * 访问个人信息页
+     * @param request 请求
+     * @return 跳转到个人信息页
+     */
     @GetMapping("profile")
     public String profile(HttpServletRequest request) {
         Integer loginUserId = (int) request.getSession().getAttribute("loginUserId");
@@ -92,6 +114,13 @@ public class AdminController {
         return "admin/profile";
     }
 
+    /**
+     * 修改密码
+     * @param request 请求
+     * @param originalPassword 原始密码
+     * @param newPassword 新密码
+     * @return 修改结果信息
+     */
     @PostMapping("/profile/password")
     @ResponseBody
     public String passwordUpdate(HttpServletRequest request, @RequestParam("originalPassword") String originalPassword,
@@ -111,6 +140,13 @@ public class AdminController {
         }
     }
 
+    /**
+     * 修改用户名和昵称
+     * @param request 请求
+     * @param loginUserName 用户名
+     * @param nickName 昵称
+     * @return 修改结果信息
+     */
     @PostMapping("/profile/name")
     @ResponseBody
     public String nameUpdate(HttpServletRequest request, @RequestParam("loginUserName") String loginUserName,
@@ -126,6 +162,11 @@ public class AdminController {
         }
     }
 
+    /**
+     * 退出登录
+     * @param request 请求
+     * @return 跳转到登陆页面
+     */
     @GetMapping("logout")
     public String logout(HttpServletRequest request) {
         request.getSession().removeAttribute("loginUserId");
