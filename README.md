@@ -1,5 +1,10 @@
 # MyBlog
-a blog website developed by springboot+mybatis+thymeleaf
+> a blog website developed by springboot+mybatis+thymeleaf
+
+## how to make it work?
+
+> just run it as a sprintboot project in IDEAL
+
 ```xml
     <select id="findCategoryList" parameterType="Map" resultMap="BaseResultMap">
         select
