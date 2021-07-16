@@ -15,9 +15,9 @@ public class PatternUtil {
             Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 
     /**
-     *
-     * @param keyword
-     * @return
+     * 验证只包含中英文和数字的字符串
+     * @param keyword 待验证的字符串
+     * @return 验证成功返回true， 否则返回false
      */
     public static Boolean validKeyword(String keyword) {
         String regex = "^[a-zA-Z0-9\u4E00-\u9FA5]+$";
@@ -37,13 +37,15 @@ public class PatternUtil {
     }
 
     /**
-     * 判断该rul字符串是否合法
+     * 判断该url字符串是否合法
      * @param urlString 待判断的url字符串
      * @return 如果合法则返回true，否则返回false
      */
     public static boolean isURL(String urlString) {
         String regex = "^([hH][tT]{2}[pP]:/*|[hH][tT]{2}[pP][sS]:/*|[fF][tT][pP]:/*)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+(\\?{0,1}(([A-Za-z0-9-~]+\\={0,1})([A-Za-z0-9-~]*)\\&{0,1})*)$";
         Pattern pattern = Pattern.compile(regex);
+        //return pattern.matcher(urlString).matches();
+        //FIXME 这里的代码有冗余，但自己不太敢改
         if (pattern.matcher(urlString).matches()) {
             return true;
         } else {

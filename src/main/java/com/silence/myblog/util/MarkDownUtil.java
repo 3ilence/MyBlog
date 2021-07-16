@@ -19,7 +19,7 @@ import java.util.List;
 public class MarkDownUtil {
     /**
      * 将md格式转换为html格式
-     * @param markdownString
+     * @param markdownString markdown格式字符串
      * @return html格式"字符串"
      */
     public static String mdToHtml(String markdownString) {

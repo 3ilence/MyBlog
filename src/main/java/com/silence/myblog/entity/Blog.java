@@ -19,7 +19,7 @@ public class Blog {
     /**标题*/
     private String blogTitle;
 
-    /**url*/
+    /**url，博客访问地址*/
     private String blogSubUrl;
 
     /**封面*/

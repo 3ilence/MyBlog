@@ -15,7 +15,6 @@ public class MD5Util {
      * @return 转换完成得到的16进制数字符串
      */
     private static String byteArrayToHexString(byte[] b) {
-        //应该是没有并发的情况，可以使用StringBuilder
         StringBuilder resultSb = new StringBuilder();
         for (int i = 0; i < b.length; i++)
             resultSb.append(byteToHexString(b[i]));

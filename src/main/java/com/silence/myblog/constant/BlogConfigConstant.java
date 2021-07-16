@@ -18,7 +18,7 @@ public class BlogConfigConstant {
 
     public static final String footerAbout = "your personal blog. have fun.";
     public static final String footerICP = "浙ICP备 xxxxxx-x号";
-    public static final String footerCopyRight = "@2018 十三";
+    public static final String footerCopyRight = "@";
     public static final String footerPoweredBy = "personal blog";
     public static final String footerPoweredByURL = "##";
 
